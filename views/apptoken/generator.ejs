@@ -1,0 +1,29 @@
+<%- include ('../partials/navigation') %>
+    <div class="container px-4 px-md-3 mt-5">
+        <div class="d-flex justify-content-center">
+            <h1 class="row">
+                Generate a new app token
+            </h1>
+        </div>
+        <div class="d-flex justify-content-center border-bottom">
+            <h3 class="row text-muted"> </h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-1 g-4 mt-3 justify-content-center">
+            <div class="card text-center w-50">
+                <div class="card-body">
+                    <h5 class="card-title">Token name</h5>
+                    <div class="error-message">
+                        <%- include ('../partials/messages') %>
+                    </div>
+                    <form action="/dashboard/apptoken/new" method="POST">
+                        <div class="mb-3">
+                            <input type="text" name="tokenName" class="form-control"
+                                value="<%= typeof name != 'undefined' ? name : '' %>" />
+                            <div id="tokenHelp" class="form-text">Enter a name for the token.</div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Generate Token</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

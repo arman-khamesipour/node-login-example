@@ -1,0 +1,71 @@
+<%- include ('../partials/navigation') %>
+    <div class="container px-4 px-md-3 mt-5">
+        <div class="d-flex justify-content-center border-bottom">
+            <h1 class="row">
+                App Token Management
+            </h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3 justify-content-center">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Active App Tokens</h5>
+                        <p class="card-text">There is no way to view an app token that was previously created, however
+                            you can reset or delete them.</p>
+                        <table class="table table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 20%;">#</th>
+                                    <th scope="col" style="width: 30%;">App Name</th>
+                                    <th scope="col" class="text-center">Options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% let index=1; %>
+                                    <% Object.keys(tokens).forEach(function(tokenName) { %>
+                                        <tr>
+                                            <th scope="row">
+                                                <%- index %>
+                                            </th>
+                                            <td>
+                                                <%- tokenName %>
+                                            </td>
+                                            <td>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-sm text-center">
+                                                            <form action="/dashboard/apptoken/reset/<%- tokenName %>"
+                                                                method="POST">
+                                                                <button type="submit"
+                                                                    class="btn btn-primary">Reset</button>
+                                                            </form>
+                                                        </div>
+                                                        <div class="col-sm text-center">
+                                                            <form action="/dashboard/apptoken/delete/<%- tokenName %>"
+                                                                method="POST">
+                                                                <button type="submit"
+                                                                    class="btn btn-danger">Delete</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <% index++; %>
+                                            <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Generate New App Token</h5>
+                        <p class="card-text">Create a new app token to use for integration purposes.</p>
+                        <a href="/dashboard/apptoken/new" class="btn btn-success">Generate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

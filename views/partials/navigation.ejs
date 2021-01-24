@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/css/navigation.css">
+<nav class="navbar navbar-expand-md shadow-sm navbar-dark">
+    <div class="container">
+        <a class="navbar-brand p-0 me-5" href="/dashboard" aria-label="Bootstrap">
+            <svg width="60px" height="50px" version="1.1" xmlns="/images/logo.svg" xmlns:xlink="#">
+                <image href="/images/logo.svg" x="0" y="0" height="50px" width="50px" />
+            </svg>          
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav flex-row flex-wrap mb-2 mb-lg-0 mr-auto">
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link <% if (title === 'Dashboard') { %>active <% } %>" href="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item col-6 col-md-auto">
+                    <a class="nav-link <% if (title === 'App Token') { %>active <% } %>" href="/dashboard/apptoken">Token</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Profile
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/users/logout" role="button">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>

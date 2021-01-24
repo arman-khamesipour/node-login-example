@@ -1,0 +1,8 @@
+icon scout
+build jwt auth endpoint
+add authentication via app token
+routes:
+    think about how to assign rasberry pi to user
+    assign new bluetooth devices to raspberry pi
+add breadcrumb navigation
+create node viewer(plants page)

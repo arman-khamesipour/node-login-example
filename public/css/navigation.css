@@ -1,0 +1,18 @@
+nav {
+    background-color: #7952b3;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+}
+
+.nav-link:hover, .nav-link:focus-within {
+    color: #fff;
+}
+
+.active {
+    font-weight: 500;
+    color: #fff;
+}

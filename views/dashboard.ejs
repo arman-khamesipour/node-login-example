@@ -1,0 +1,53 @@
+<%- include ('./partials/navigation') %>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <div class="container px-4 px-md-3 mt-5">
+        <div class="d-flex justify-content-center">
+            <h1 class="row">
+                <%= title %>
+            </h1>
+        </div>
+        <div class="d-flex justify-content-center border-bottom">
+            <h3 class="row text-muted">Welcome to your dashboard <%= user.name %>! From here you can jump to the most
+                    popular pages </h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+            <div class="col">
+                <a href="/dashboard/apptoken">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">App Token</h5>
+                            <p class="card-text">Manage app tokens associated to your account. Create or view app tokens
+                                that can be used to integrate with the platform.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

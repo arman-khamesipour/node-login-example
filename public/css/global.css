@@ -1,0 +1,18 @@
+html *
+{
+   font-size: .875rem;
+   font-weight: 400;
+   font-family: var(--bs-font-sans-serif),'Google Sans',Roboto,Arial,sans-serif !important;
+}
+
+html, body {
+   height: 100%
+}
+
+.navbar-brand {
+   width: 40px;
+}
+
+.error-message {
+   color:#ff1100
+}
