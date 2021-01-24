@@ -1,6 +1,9 @@
 # About
 Simple template repo which can be used to fork and create projects without needing much work before hand.
 
+NOTE:
+This has very little to no security, does encryption of passwords and auth tokens but can be brute forced as no login attempt limits etc...
+
 # Systems
 - node (express/passport)
 - ejs (html templating)
@@ -22,17 +25,6 @@ Environment variables to run:
 
 AWS dynamodb instance
 
-# Npm dependencies
-TODO
-        
 # TODO:
-
-- [ ] fix readme
-- [x] build jwt auth endpoint
-- [x] add authentication via app token
-- [ ] get a beter icon
-- [ ] come up with a name
 - [ ] add breadcrumb navigation
 - [ ] convert to typescript
-- [ ] add security
-- [ ] add list of npm dependencies 
